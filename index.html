@@ -7,5 +7,20 @@
 </head>
 <body>
   <h1>Olá, Mundo!</h1>
+  <ul>
+    <li><input id="peso" type="number" placeholder="Peso: "></li>
+    <li><input id="alt" type="number" placeholder="Altura: "></li>
+    <li><input type="submit" value="Calcular IMC" onclick="calcIMC()"></li>
+    <li><p id="textResultado"></p></li>
+  </ul>
+  <script>
+    function calcIMC(){
+      var peso = Number(document.getElementById('peso').value)
+      var alt = Number(document.getElementById('alt').value)
+      var IMC
+      IMC = peso/alt**2
+      document.getElementById('textResultado').innerText = "IMC: " + IMC
+    }
+  </script>
 </body>
 </html>
